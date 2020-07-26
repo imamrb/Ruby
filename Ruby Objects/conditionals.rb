@@ -1,5 +1,5 @@
-year = 2301
 
+year = 2301
 if year % 4 == 0 
     puts "Leap Year!"
 elsif year % 100 == 0 && year % 400 ==0 
@@ -8,14 +8,16 @@ else
     puts "Not a Leap Year"
 end
 
-puts "This is not even year" if not (year % 2) == 0
-
-x = 1 
-y = nil
-unless y
-    puts "Y is empty"
+puts "Odd" if not (year % 2) == 0 
+#=> Odd
+unless year % 2 == 0
+    puts "Odd"
 end
+#=> Odd
 
+
+
+x = 4
 case
 when x%2 == 0
   puts "x is even"
@@ -61,11 +63,6 @@ for i in arr do
     puts i
 end
 
-puts "\n***for Each ***"
-arr.each do |fruit|
-    puts "I love #{fruit.capitalize}"
-end
-
 
 puts "\n***do..while Loop ***"
 x = 0
@@ -76,6 +73,7 @@ loop do
     break if x >= 10
 end
 
+
 puts "\n** While loop**"
 x = 0
 while x < 10
@@ -84,7 +82,23 @@ while x < 10
 end 
 
 
+# Iterators
+arr = %w{This words will be converted to array}
 puts "\n *** Upto ***** "
 1.upto(10) do |num|
     puts "Hello " + num.to_s
 end
+
+puts "\n***for Each ***"
+arr.each do |word|
+  print word, " "
+end
+puts ""
+
+puts "\n***for Each ***"
+arr.each_with_index do |word, index|
+  puts "#{index} : #{word}"
+end
+puts ""
+
+5.times { puts "Hello" }

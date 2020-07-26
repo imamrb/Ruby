@@ -13,25 +13,9 @@ def Merge(arr, left, mid, right)
     end
   end
 
-  #put back remaining elements
-  # while(i<=mid) do
-  #   sorted_array[k] = arr[i]
-  #   k+=1 ; i+=1
-  # end 
-
-  #shortcut of above code
   sorted_array += arr[i..mid]
-  # while(j<=right) do
-  #   sorted_array[k] = arr[j]
-  #   k+=1 ; j+=1 
-  # end 
   sorted_array += arr[j..right]
-
-  # for i in (left..right) do
-  #    arr[i] = sorted_array[i]
-  # end
-
-  #copy back and return
+  
   arr[left..right] = sorted_array[left..right]
 end
 
@@ -47,8 +31,10 @@ end
 puts "Input array elements: "
 arr = gets
 arr = arr.split.map { |i| i.to_i }
-size = arr.length
 
+puts arr
+
+size = arr.length
 mergeSort(arr, 0, size-1)
 
 puts "Sorted array: "

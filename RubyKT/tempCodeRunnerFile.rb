@@ -1,0 +1,2 @@
+
+puts s.inspect

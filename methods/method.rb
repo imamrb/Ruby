@@ -14,7 +14,8 @@ findLongestWord
 
 
 def oddOrEven?(n)
-    n % 2 == 0 ? "even" : "odd"  #last statement returned automatically
+    n % 2 == 0 ? "even" : "odd"  
 end
 
-puts oddOrEven?(554)
+puts oddOrEven?(554) 
+#=> even

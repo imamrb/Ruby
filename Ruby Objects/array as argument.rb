@@ -5,10 +5,11 @@ end
 
 arr = gets
 arr = arr.split.map{|i| i.to_i}
+
 puts arr.inspect
 Method(arr)
 
-puts arr
+puts arr.inspect
 
 # variable is not modified
 def modify(x)
